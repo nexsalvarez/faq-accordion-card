@@ -18,4 +18,116 @@ html {
 }
 body {
     font-family: 'Kumbh Sans', sans-serif;
+    background: var(--soft-violet);
+    background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+}
+main {
+    width: 100vw;
+    min-height: 90vh;
+    display: grid;
+    place-content: center;
+    padding: 72px 24px 12px 24px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: var(--light-grayish);
+    border-radius: 24px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 0 24px 40px 24px;
+}
+.faq-container_image {
+    position: relative;
+    width: 75%;
+    height: 120px;
+    grid-row: 1;
+    display: flex;
+    justify-self: center;
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.faq-container_image picture {
+    width: auto;
+    height: auto;
+}
+.faq-container_image picture img {
+    position: absolute;
+    top: -80%;
+}
+.faq-container_content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    grid-row: 2;
+}
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    text-align: center;
+    color: #222222;
+}
+.faq_content--qa {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+}
+.faq_content--qa button {
+    width: 280px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid hsl(240, 6%, 50%, 0.4);
+    background-color: var(--light-grayish);
+    padding: 12px 0;
+    font-size: var(--sm);
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--very-dark-grayish);
+}
+.faq_content--qa button:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+.faq_content--qa button:active {
+    font-weight: 700;
+    color: var(--very-dark-grayish);
+}
+
+.qa-panel {
+    display: none;
+}
+
+footer {
+    width: 100vw;
+    min-height: 10vh;
+    display: grid;
+    place-content: center;
+}
+.attribution {
+    width: auto;
+    height: auto;
+}
+.attribution p {
+    font-size: var(--sm);
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: center;
+    color: var(--light-grayish);
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--light-grayish);
+}
+.attribution a:hover {
+    cursor: pointer;
+    color: var(--soft-red);
 }
