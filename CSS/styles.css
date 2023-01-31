@@ -37,7 +37,7 @@ section {
     grid-template-rows: auto;
     background-color: var(--light-grayish);
     border-radius: 24px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -10px;
     padding: 0 24px 40px 24px;
 }
 .faq-container_image {
@@ -79,7 +79,8 @@ h1 {
     height: auto;
     margin-top: 12px;
 }
-.faq_content--qa button {
+.faq_content--qa .qa-accordion,
+.active {
     width: 280px;
     height: auto;
     display: flex;
@@ -89,21 +90,29 @@ h1 {
     background-color: var(--light-grayish);
     padding: 12px 0;
     font-size: var(--sm);
-    font-weight: 400;
     line-height: 1.6rem;
     color: var(--very-dark-grayish);
+    outline: none;
 }
-.faq_content--qa button:hover {
+.faq_content--qa .qa-accordion {
+    font-weight: 400;
+    transition: 0.8s;
+}
+.faq_content--qa .qa-accordion:hover {
     cursor: pointer;
     color: var(--soft-red);
 }
-.faq_content--qa button:active {
+.active {
+    cursor: pointer;
     font-weight: 700;
-    color: var(--very-dark-grayish);
+    transition: 0.2s;
 }
 
 .qa-panel {
+    max-height: 0;
     display: none;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
 }
 
 footer {
